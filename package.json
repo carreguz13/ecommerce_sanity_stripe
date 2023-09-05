@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@babel/core": "^7.22.15",
-    "@babel/preset-react": "^7.22.15",
     "@sanity/client": "^6.4.9",
     "@sanity/image-url": "^1.0.2",
     "@stripe/stripe-js": "^2.1.2",
@@ -24,5 +23,8 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.10.1",
     "stripe": "^13.4.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.22.15"
   }
 }
