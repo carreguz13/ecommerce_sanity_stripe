@@ -8,6 +8,7 @@ function Layout({ children }) {
   return (
     <div className="layout">
       <Head>
+        .22+
         <title>Ecommerce Store</title>
       </Head>
       <header>
