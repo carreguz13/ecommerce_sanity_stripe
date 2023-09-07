@@ -19,6 +19,7 @@ function Home({products, bannerData}) {
         <Productcard key={product._id} product={product}/>
         )}</div>
         <FooterBanner footerBanner={bannerData && bannerData[0]}/>
+        
       </>
     </div>
   )

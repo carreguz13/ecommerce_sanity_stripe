@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { use, useState } from "react";
+
 //we need client beacuse we need to fetch data in here and urlFor cause we have images
 import { urlFor, client } from "@/lib/client";
 import {
@@ -9,11 +9,14 @@ import {
   AiOutlineStar,
 } from "react-icons/ai";
 import Productcard from "@/components/Productcard";
+import { useStateContext } from "@/context/StateContext";
 
 function ProductDetails({ products, product }) {
   const { image, name, details, price } = product;
 
   const [index, setindex] = useState(0)
+
+  const {increaseqty, decreaseqty, qty, AddToCart} = useStateContext()
 
   return (
     <div>
@@ -30,6 +33,7 @@ function ProductDetails({ products, product }) {
           </div>
 
         </div>
+      
 
         <div className="product-detail-desc">
           <h1>{name}</h1>
@@ -50,16 +54,16 @@ function ProductDetails({ products, product }) {
             <h3>Quantity:</h3>
             <p className="quantity-desc">
               <span className="minus">
-                <AiOutlineMinus />
+                <AiOutlineMinus onClick={decreaseqty}/>
               </span>
-              <span className="num">0</span>
+              <span className="num">{qty}</span>
               <span className="plus">
-                <AiOutlinePlus />
+                <AiOutlinePlus onClick={increaseqty}/>
               </span>
             </p>
           </div>
           <div className="buttons">
-            <button type="button" className="add-to-cart" onClick="">
+            <button type="button" className="add-to-cart" onClick={() => AddToCart(product, qty)}>
               Add to Cart
             </button>
             <button type="button" className="buy-now" onClick="">
