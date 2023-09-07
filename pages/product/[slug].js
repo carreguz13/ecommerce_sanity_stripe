@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 //we need client beacuse we need to fetch data in here and urlFor cause we have images
 import { urlFor, client } from "@/lib/client";
 import {
@@ -12,19 +13,22 @@ import Productcard from "@/components/Productcard";
 function ProductDetails({ products, product }) {
   const { image, name, details, price } = product;
 
+  const [index, setindex] = useState(0)
+
   return (
     <div>
       <div className="product-detail-container">
         <div>
           <div className="image-container">
-            <img src={urlFor(image && image[0])} alt="" />
+            <img src={urlFor(image && image[index])} className="product-detail-image" />
           </div>
-          {/** 
+          
           <div className="small-images-container">
             {image?.map((item, i) => (
-              <img src={urlFor(item)} className="" onMouseEnter="" />
+              <img src={urlFor(item)} className={i === index ? 'small-image selected-image' : 'small-image'} onMouseEnter={()=>setindex(i)} />
             ))}
-          </div>*/}
+          </div>
+
         </div>
 
         <div className="product-detail-desc">
@@ -74,7 +78,7 @@ function ProductDetails({ products, product }) {
               <Productcard key={item._id} product={item} />
             ))}
 
-            {console.log(products)}
+           
           </div>
         </div>
       </div>
