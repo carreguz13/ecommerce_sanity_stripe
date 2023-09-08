@@ -126,7 +126,11 @@ return (
         showCart,
         setshowCart,
         toggleCartItemQuantity,
-        removeCartItem
+        removeCartItem,
+        setcartItems,
+        settotalPrice,
+        settotalQuantities
+      
     }} >
         {children}
     </Context.Provider>
