@@ -12,6 +12,14 @@ export default {
             },
         },
         {
+            name: 'image2',
+            title: 'Image2',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
             name: 'buttonText',
             title: 'ButtonText',
             type: 'string',
@@ -44,6 +52,16 @@ export default {
         {
             name: 'largeText2',
             title: 'LargeText2',
+            type: 'string',
+        },
+         {
+            name: 'largeText3',
+            title: 'LargeText3',
+            type: 'string',
+        },
+          {
+            name: 'desc2',
+            title: 'Desc2',
             type: 'string',
         },
         {
