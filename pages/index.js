@@ -21,8 +21,7 @@ function Home({products, bannerData}) {
         <FooterBanner footerBanner={bannerData && bannerData[0]}/>
         
       </>
-    </div>
-  )
+    </div>  )
 }
 
 //fecthcing data in next by using sanity and server side rendering 

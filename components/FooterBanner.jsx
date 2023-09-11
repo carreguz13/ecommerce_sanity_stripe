@@ -16,7 +16,7 @@ function FooterBanner({ footerBanner }) {
           <p>{footerBanner.smallText}</p>
           <h3>{footerBanner.midText}</h3>
           <p>{footerBanner.desc2}</p>
-          <Link href={`/product/${footerBanner.product}`}>
+          <Link href={`/product/headphones_new`}>
             <button type="button">{footerBanner.buttonText}</button>
           </Link>
         </div>
